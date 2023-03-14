@@ -1,8 +1,15 @@
 import "./App.css";
+import { useState } from "react";
 import Search from "./components/Search";
 import List from "./components/List";
 
 function App() {
+  const [searchTerm, setSearchTerm] = useState();
+
+  const handleSearch = (e) => {
+    setSearchTerm(e.target.value);
+  };
+
   const items = [
     {
       id: 1,
@@ -41,10 +48,14 @@ function App() {
     },
   ];
 
+  const filterList = items.filter((book) => {
+    return book.title.toLowerCase().includes(searchTerm);
+  });
+
   return (
     <>
-      <Search />
-      <List list={items} />
+      <Search searchTerm={searchTerm} handleSearch={handleSearch} />
+      <List list={filterList} />
     </>
   );
 }

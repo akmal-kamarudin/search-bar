@@ -1,18 +1,14 @@
 import { useState } from "react";
 
-function Search(props) {
-  const [searchTerm, setSearchTerm] = useState();
-
+function Search({ searchTerm, handleSearch }) {
   return (
     <div>
       <label>Search</label>
-      <input
-        type="text"
-        value={searchTerm}
-        onChange={(e) => setSearchTerm(e.target.value)}
-      />
+      <input type="text" value={searchTerm} onChange={handleSearch} />
     </div>
   );
 }
 
 export default Search;
+
+// (e) => setSearchTerm(e.target.value)
