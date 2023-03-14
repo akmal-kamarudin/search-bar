@@ -55,7 +55,8 @@ function App() {
   return (
     <>
       <Search searchTerm={searchTerm} handleSearch={handleSearch} />
-      <List list={filterList} />
+      {/* <List list={filterList} /> */}
+      {!searchTerm ? <List list={items} /> : <List list={filterList} />}
     </>
   );
 }
