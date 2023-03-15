@@ -4,7 +4,7 @@ import Search from "./components/Search";
 import List from "./components/List";
 
 function App() {
-  const [searchTerm, setSearchTerm] = useState();
+  const [searchTerm, setSearchTerm] = useState("");
 
   const handleSearch = (e) => {
     setSearchTerm(e.target.value);
@@ -55,8 +55,8 @@ function App() {
   return (
     <>
       <Search searchTerm={searchTerm} handleSearch={handleSearch} />
-      {/* <List list={filterList} /> */}
-      {!searchTerm ? <List list={items} /> : <List list={filterList} />}
+      <List list={filterList} />
+      {/* {!searchTerm ? <List list={items} /> : <List list={filterList} />} */}
     </>
   );
 }
