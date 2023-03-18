@@ -49,7 +49,7 @@ function App() {
   ];
 
   const filterList = items.filter((book) => {
-    return book.title.toLowerCase().includes(searchTerm);
+    return book.title.toLowerCase().includes(searchTerm.toLowerCase());
   });
 
   return (
