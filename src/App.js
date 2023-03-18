@@ -54,8 +54,14 @@ function App() {
 
   return (
     <>
-      <Search searchTerm={searchTerm} handleSearch={handleSearch} />
-      <List list={filterList} />
+      <div className="bg-gray-400 grid h-screen place-items-center">
+        <div>
+          <Search searchTerm={searchTerm} handleSearch={handleSearch} />
+        </div>
+        <div>
+          <List list={filterList} />
+        </div>
+      </div>
       {/* {!searchTerm ? <List list={items} /> : <List list={filterList} />} */}
     </>
   );
