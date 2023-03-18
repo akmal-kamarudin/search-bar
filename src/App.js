@@ -56,7 +56,7 @@ function App() {
     <>
       <div className="bg-fixed w-screen h-screen bg-">
         <div className="flex flex-row justify-center">
-          <div className="flex flex-col items-center m-16 p-4 h-80 w-96 bg-gradient-to-r from-sky-300 to-sky-800 rounded-md shadow-xl shadow-sky-800/50">
+          <div className="flex flex-col items-center m-16 p-4 h-80 w-96 bg-gradient-to-r from-violet-500 to-pink-500 rounded-md shadow-xl shadow-violet-800/50">
             <div className="py-4">
               <Search searchTerm={searchTerm} handleSearch={handleSearch} />
             </div>
