@@ -54,12 +54,16 @@ function App() {
 
   return (
     <>
-      <div className="bg-gray-400 grid h-screen place-items-center">
-        <div>
-          <Search searchTerm={searchTerm} handleSearch={handleSearch} />
-        </div>
-        <div>
-          <List list={filterList} />
+      <div className="bg-fixed w-screen h-screen bg-">
+        <div className="flex flex-row justify-center">
+          <div className="flex flex-col items-center m-16 p-4 h-80 w-96 bg-gradient-to-r from-sky-300 to-sky-800 rounded-md shadow-xl shadow-sky-800/50">
+            <div className="py-4">
+              <Search searchTerm={searchTerm} handleSearch={handleSearch} />
+            </div>
+            <div className="py-4">
+              <List list={filterList} />
+            </div>
+          </div>
         </div>
       </div>
       {/* {!searchTerm ? <List list={items} /> : <List list={filterList} />} */}
