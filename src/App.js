@@ -54,9 +54,9 @@ function App() {
 
   return (
     <>
-      <div className="bg-fixed w-screen h-screen bg-">
+      <div className="bg-fixed w-screen h-screen bg-zinc-600">
         <div className="flex flex-row justify-center">
-          <div className="flex flex-col items-center m-16 p-4 h-80 w-96 bg-gradient-to-r from-violet-500 to-pink-500 rounded-md shadow-xl shadow-violet-800/50">
+          <div className="flex flex-col items-center m-16 p-4 h-80 w-96 rounded-md bg-zinc-800 shadow-xl shadow-zinc-900/50">
             <div className="py-4">
               <Search searchTerm={searchTerm} handleSearch={handleSearch} />
             </div>
