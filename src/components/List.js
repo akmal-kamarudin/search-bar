@@ -1,6 +1,6 @@
 function List({ list }) {
   return (
-    <div className="text-slate-800 font-medium tracking-wider">
+    <div className="text-slate-900 font-medium tracking-wider">
       <ul>
         {list.length > 0
           ? list.map((book) => {
